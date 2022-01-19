@@ -9,7 +9,7 @@ cmake .. && make
 ```
 ## 使用方法
 > test.ini内容
-<br>
+
 ```ini
 ; MySQL配置
 [MySQL]
