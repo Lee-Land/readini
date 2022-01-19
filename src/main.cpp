@@ -45,10 +45,10 @@ int main(int argc, char* argv[]) {
 
     //键值查找
     Ini::Parameters mysql = iniConfig["MySQL"];
-    string host = mysql["host"];
-    string port = mysql["port"];
-    string user = mysql["user"];
-    string pwd = mysql["password"];
+    string host = mysql["host"].asString();
+    int port = mysql["port"].asInt();
+    string user = mysql["user"].asString();
+    string pwd = mysql["password"].asString();
 
     cout << "主机: " << host << endl;
     cout << "端口: " << port << endl;

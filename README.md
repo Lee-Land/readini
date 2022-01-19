@@ -35,22 +35,29 @@ int main() {
     try {
         //解析
         iniConfig.parse(input);
+        
+        //取值
+        Ini::Parameters mysql = iniConfig["MySQL"];
+        string host = mysql["host"].asString();
+        int port = mysql["port"].asInt();
+        string user = mysql["user"].asString();
+        string pwd = mysql["password"].asString();
+        
+        cout << "主机: " << host << endl;
+        cout << "端口: " << port << endl;
+        cout << "用户名: " << user << endl;
+        cout << "密码: " << pwd << endl;
+        
     } catch (const ios_base::failure& e1) {
         cerr << e1.what() << endl;
     } catch (const Ini::ErrorLog& e2) {
         cerr << e2.what() << endl;
     }
-    
-    Ini::Parameters mysql = iniConfig["MySQL"];
-    string host = mysql["host"];
-    string port = mysql["port"];
-    string user = mysql["user"];
-    string pwd = mysql["password"];
-    
-    cout << "主机: " << host << endl;
-    cout << "端口: " << port << endl;
-    cout << "用户名: " << user << endl;
-    cout << "密码: " << pwd << endl;
     return 0;
 }
 ```
+>输出
+>>主机: 127.0.0.1<br>
+端口: 3306<br>
+用户名: root<br>
+密码: 123456
