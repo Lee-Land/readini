@@ -3,6 +3,8 @@
 //
 
 #include "iniconfig.h"
+#include "inielement.h"
+
 #include <cstdarg>
 #include <cstring>
 
@@ -112,9 +114,6 @@ namespace Ini {
                         }
 
                         last_section = content.substr(index + 1, split_index - 1);
-
-                        unordered_map<string, string> parameter;
-                        sections_[last_section] = parameter;
 
                         state_ = IniState::SUCCESS;
                         break;

@@ -2,13 +2,15 @@
 // Created by xiamingjie on 2022/1/18.
 //
 
-#ifndef _INI_CONFIG_H
-#define _INI_CONFIG_H
+#ifndef REDINI_INICONFIG_H
+#define REDINI_INICONFIG_H
 
 #include <fstream>
 #include <string>
 #include <exception>
 #include <unordered_map>
+
+#include "inielement.h"
 
 namespace Ini {
 
@@ -37,7 +39,6 @@ namespace Ini {
         SUCCESS
     };
 
-    using Parameters = std::unordered_map<std::string, std::string>;
     using Section = std::unordered_map<std::string, Parameters>;
 
     class IniConfig {
@@ -61,4 +62,4 @@ namespace Ini {
 }
 
 
-#endif //_INI_CONFIG_H
+#endif //REDINI_INICONFIG_H
