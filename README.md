@@ -1,4 +1,4 @@
-# IniConfig
+# readini
 *.ini文件解析工具
 
 ## 运行测试
