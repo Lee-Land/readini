@@ -30,14 +30,14 @@ int main() {
     string file("file.ini");
     fstream input(file, ios::in);
     
-    Ini::IniConfig iniConfig;
+    ini::IniConfig iniConfig;
     
     try {
         //解析
         iniConfig.parse(input);
         
         //取值
-        Ini::Parameters mysql = iniConfig["MySQL"];
+        ini::Parameters mysql = iniConfig["MySQL"];
         string host = mysql["host"].asString();
         int port = mysql["port"].asInt();
         string user = mysql["user"].asString();
