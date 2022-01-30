@@ -8,7 +8,7 @@
 #include <cstdarg>
 #include <cstring>
 
-namespace Ini {
+namespace ini {
 
     using namespace std;
 

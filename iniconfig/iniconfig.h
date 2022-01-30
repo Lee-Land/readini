@@ -12,7 +12,7 @@
 
 #include "inielement.h"
 
-namespace Ini {
+namespace ini {
 
     class ErrorLog : public std::exception {
     public:

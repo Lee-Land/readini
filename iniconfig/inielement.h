@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include <string>
 
-namespace Ini {
+namespace ini {
 
     class Value {
     public:

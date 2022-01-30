@@ -4,7 +4,7 @@
 
 #include "inielement.h"
 
-namespace Ini {
+namespace ini {
     using namespace std;
 
     Value::Value(const std::string &&value) {
