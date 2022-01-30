@@ -17,14 +17,14 @@ int main(int argc, char* argv[]) {
     string file(argv[1]);
     fstream input(file, ios::in);
 
-    Ini::IniConfig iniConfig;
+    ini::IniConfig iniConfig;
 
     try {
         //解析
         iniConfig.parse(input);
     } catch (const ios_base::failure& e1) {
         cerr << e1.what() << endl;
-    } catch (const Ini::ErrorLog& e2) {
+    } catch (const ini::ErrorLog& e2) {
         cerr << e2.what() << endl;
     }
 
@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     cout << endl << "键值对查找: " << endl;
 
     //键值查找
-    Ini::Parameters mysql = iniConfig["MySQL"];
+    ini::Parameters mysql = iniConfig["MySQL"];
     string host = mysql["host"].asString();
     int port = mysql["port"].asInt();
     string user = mysql["user"].asString();

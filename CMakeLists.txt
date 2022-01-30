@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(iniconfig)
 
-add_executable(readini src/main.cpp iniconfig/iniconfig.h iniconfig/iniconfig.cpp iniconfig/inielement.cpp iniconfig/inielement.h)
+add_executable(readini test/test.cpp iniconfig/iniconfig.h iniconfig/iniconfig.cpp iniconfig/inielement.cpp iniconfig/inielement.h)
